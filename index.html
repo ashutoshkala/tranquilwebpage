@@ -1,294 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tranquil AI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Global Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      color: #333;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 80vh;
-      background-image: url('hero-image.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      animation: fadeIn 1s ease-out;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #3498db;
-      color: #fff;
-      text-decoration: none;
-      padding: 16px 32px;
-      border-radius: 30px;
-      font-size: 18px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #2980b9;
-    }
-
-    /* Features Section */
-    .features {
-      padding: 80px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 40px;
-    }
-
-    .feature {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .feature:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .feature img {
-      max-width: 80px;
-      margin-bottom: 20px;
-    }
-
-    .feature h3 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .feature p {
-      font-size: 16px;
-      color: #666;
-    }
-
-    /* Testimonials Section */
-    .testimonials {
-      padding: 80px 20px;
-      background-color: #f2f2f2;
-    }
-
-    .testimonials h2 {
-      text-align: center;
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 40px;
-    }
-
-    .testimonial-carousel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .testimonial {
-      flex: 0 0 80%;
-      scroll-snap-align: center;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      text-align: center;
-      margin: 0 20px;
-    }
-
-    .testimonial img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    .testimonial p {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    .testimonial h4 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-
-    .testimonial span {
-      font-size: 16px;
-      color: #999;
-    }
-
-    /* CTA Section */
-    .cta {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      font-size: 20px;
-      color: #666;
-      margin-bottom: 30px;
-    }
-
-    .cta-button.large {
-      font-size: 20px;
-      padding: 20px 40px;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquil AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .coming-soon {
+            font-size: 24px;
+            color: #999;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .feature {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        .feature h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Tranquil AI</h1>
-      <p>Your all-in-one solution for mindfulness and mental well-being</p>
-      <a href="#" class="cta-button">Get Started</a>
+    <h1>Welcome to Tranquil AI</h1>
+    <p>Your all-in-one solution for mindfulness and mental well-being</p>
+    <div class="features">
+        <div class="feature">
+            <h2>AI-Driven Therapy</h2>
+            <p>Engage in personalized therapy sessions powered by advanced AI algorithms.</p>
+        </div>
+        <div class="feature">
+            <h2>Guided Meditations</h2>
+            <p>Access a variety of guided meditation tracks designed to promote relaxation and mindfulness.</p>
+        </div>
+        <div class="feature">
+            <h2>Sleep Support</h2>
+            <p>Enjoy soothing sleep audios and techniques to help improve sleep quality and promote restful nights.</p>
+        </div>
+        <div class="feature">
+            <h2>Mood Tracking</h2>
+            <p>Monitor your mood patterns and gain insights into your emotional well-being over time.</p>
+        </div>
     </div>
-  </div>
-
-  <!-- Features Section -->
-  <div class="features">
-    <div class="feature">
-      <img src="ai-therapy-icon.png" alt="AI-Driven Therapy">
-      <h3>AI-Driven Therapy</h3>
-      <p>Engage in personalized therapy sessions powered by advanced AI algorithms.</p>
-    </div>
-    <div class="feature">
-      <img src="meditation-icon.png" alt="Guided Meditations">
-      <h3>Guided Meditations</h3>
-      <p>Access a variety of guided meditation tracks designed to promote relaxation and mindfulness.</p>
-    </div>
-    <div class="feature">
-      <img src="sleep-icon.png" alt="Sleep Support">
-      <h3>Sleep Support</h3>
-      <p>Enjoy soothing sleep audios and techniques to help improve sleep quality and promote restful nights.</p>
-    </div>
-    <div class="feature">
-      <img src="mood-tracking-icon.png" alt="Mood Tracking">
-      <h3>Mood Tracking</h3>
-      <p>Monitor your mood patterns and gain insights into your emotional well-being over time.</p>
-    </div>
-  </div>
-
-  <!-- Testimonials Section -->
-  <div class="testimonials">
-    <h2>What Our Users Say</h2>
-    <div class="testimonial-carousel">
-      <div class="testimonial">
-        <img src="user-avatar-1.jpg" alt="User 1">
-        <p>"Tranquil AI has been a game-changer for my mental health. The personalized therapy sessions and guided meditations have helped me achieve a new level of mindfulness and inner peace."</p>
-        <h4>John Doe</h4>
-        <span>Software Engineer</span>
-      </div>
-      <div class="testimonial">
-        <img src="user-avatar-2.jpg" alt="User 2">
-        <p>"As someone who struggles with insomnia, Tranquil AI's sleep support features have been a lifesaver. The soothing audio tracks have helped me fall asleep faster and wake up feeling more rested."</p>
-        <h4>Jane Smith</h4>
-        <span>Marketing Manager</span>
-      </div>
-      <div class="testimonial">
-        <img src="user-avatar-3.jpg" alt="User 3">
-        <p>"Tracking my mood with Tranquil AI has been incredibly insightful. The app has helped me identify patterns and triggers, allowing me to better manage my emotional well-being."</p>
-        <h4>Michael Johnson</h4>
-        <span>Graphic Designer</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA Section -->
-  <div class="cta">
-    <h2>Start Your Journey to Tranquility</h2>
-    <p>Download Tranquil AI and begin your path to improved mental health and well-being.</p>
-    <a href="#" class="cta-button large">Get the App</a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Tranquil AI. All rights reserved.</p>
-  </footer>
+    <div class="coming-soon">Coming Soon...</div>
 </body>
 </html>
