@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f9ff;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #76c7c0;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Intro Section */
+#home {
+    background: url('ocean-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-text h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.intro-text p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #76c7c0;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn.playstore:hover, .btn.appstore:hover, .btn.download-now:hover {
+    box-shadow: 0px 0px 15px rgba(115, 203, 192, 0.8);
+}
+
+/* Features Section */
+#features {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.card h2 {
+    color: #76c7c0;
+}
+
+/* Team Section */
+#team {
+    background-color: #e0f7fa;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    width: 20%;
+}
+
+.card h3 {
+    color: #76c7c0;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #76c7c0;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Coming Soon Page Styles */
+.coming-soon-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #76c7c0, #b9d5e5);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-container h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.coming-soon-container p {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Page Transitions */
+.fade-in {
+    animation: fadeIn ease 2s;
+}
+
+.fade-out {
+    animation: fadeOut ease 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .btn.playstore, .btn.appstore {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.playstore i, .btn.appstore i {
+    font-size: 24px;
+  }
+  
+  .btn.playstore:hover, .btn.appstore:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
